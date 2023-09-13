@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>pre_ronda_window</class>
+ <widget class="QWidget" name="pre_ronda_window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>350</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>500</width>
+    <height>350</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>DCCafé-Ventana Inicial</string>
+  </property>
+  <widget class="QLabel" name="logo">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>50</y>
+     <width>300</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>sprites/otros/logo_negro.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="texto_inspirativo">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>190</y>
+     <width>401</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Yu Gothic UI Semibold</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>¡Bienvenido a DCCafé, el mejor juego de python que encontraras!</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="boton_reinicar">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>270</y>
+     <width>141</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 0, 0);
+color: white;
+</string>
+   </property>
+   <property name="text">
+    <string>Comenzar de Nuevo</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="boton_seguir_jugando">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>270</y>
+     <width>121</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 179, 0);
+color: white;</string>
+   </property>
+   <property name="text">
+    <string>&amp;Seguir Jugando</string>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>boton_seguir_jugando</sender>
+   <signal>clicked()</signal>
+   <receiver>pre_ronda_window</receiver>
+   <slot>seguir_partida()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>155</x>
+     <y>275</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>249</x>
+     <y>174</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>boton_reinicar</sender>
+   <signal>clicked()</signal>
+   <receiver>pre_ronda_window</receiver>
+   <slot>reiniciar_partida()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>355</x>
+     <y>275</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>249</x>
+     <y>174</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>seguir_partida()</slot>
+  <slot>reiniciar_partida()</slot>
+ </slots>
+</ui>
